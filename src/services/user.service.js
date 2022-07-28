@@ -1,5 +1,5 @@
-const User = require('../models/User');
-var User = {
+const User = require('../models').User;
+var UserService = {
     findAll: findAll,
     create: create,
     findById: findById,
@@ -8,6 +8,7 @@ var User = {
 }
 
 function findAll() {
+    console.log(User)
     return User.findAll();
 }
 
@@ -26,12 +27,9 @@ function create(User) {
 
 function updateUser(User, id) {
     var updateUser = {
-        title: User.title,
-        technologies: User.technologies,
-        description: User.description,
-        budget: User.budget,
-        contact_email: User.contact_email
+        firstName: User.firstName,
+        lastName: User.lastName,
     };
     return User.update(updateUser, { where: { id: id } });
 }
-module.exports = User;
+module.exports = UserService;
