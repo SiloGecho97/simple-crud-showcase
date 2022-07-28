@@ -10,7 +10,7 @@ yarn install --frozen-lockfile
 
 ```
 
-#### Sequilize migrations
+### Sequilize migrations
 
 ```bash
 cd src
@@ -34,7 +34,7 @@ Linting:
 ```bash
 
 # run prettier
-yarn prettier
+yarn format
 
 ```
 
